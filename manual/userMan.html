@@ -80,58 +80,305 @@
 <h1 id="操作マニュアル">操作マニュアル</h1>
 
 <h1 id="1-本書について">1 本書について</h1>
-<p>本書では、都市構造評価ツール（以下「本ツール」という。）の操作手順について記載しています。</p>
+<p>本書では、都市構造評価ツールの操作手順について記載しています。
+本ツールの拡張機能、応用操作については下記を参照ください。</p>
+<ul>
+<li><a href="advancedMan.html">拡張機能と応用操作手順</a></li>
+<li><a href="../resources/%E6%93%8D%E4%BD%9C%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E5%8F%82%E8%80%83%E8%B3%87%E6%96%99.pdf">操作マニュアルPDF</a></li>
+</ul>
 <h1 id="2-使い方">2 使い方</h1>
-<h2 id="2-1-3d都市モデル建物データの取り込み">2-1 3D都市モデル（建物データ）の取り込み</h2>
-<p>QGISを起動します。
-<img src="../resources/devMan/tutorial_001.png" alt=""></p>
-<p>PLATEAU QGIS Pluginを起動します。
-※PLATEAU QGIS Plugin プラグインのインストール方法については、環境構築手順書を参照ください。
-<img src="../resources/userMan/tutorial_001.png" alt=""></p>
-<p>「バッチプロセスで実行」を押下し、バッチ処理画面を開きます。
-<img src="../resources/userMan/tutorial_002.png" alt=""></p>
-<p>PLATEAU CityGMLファイル&gt;ファイル選択をクリックし、取り込みを行う建物データを選択します。
-CityGMLデータフォルダの「bldg」フォルダ内のGMLファイルを選択してください。
-<img src="../resources/userMan/tutorial_003.png" alt=""></p>
-<p>ファイル選択後、「実行」ボタンを押下し建物データの取り込みを行います。
-<img src="../resources/userMan/tutorial_004.png" alt=""></p>
-<p>取り込みが完了するとマップ上に建物データが表示されます。
-<img src="../resources/userMan/tutorial_005.png" alt=""></p>
-<h2 id="2-2-本ツールの起動">2-2 本ツールの起動</h2>
-<p>※本ツール プラグインのインストール方法については、環境構築手順書を参照ください。
-プラグイン&gt;Plateau Statics Visualization Pluginを選択しプラグインを起動します。
-<img src="../resources/userMan/tutorial_006.png" alt=""></p>
-<h2 id="2-3-フォルダ生成データ格納">2-3 フォルダ生成・データ格納</h2>
-<p>本ツール 機能パネル内【フォルダ作成】を押下し、インプットデータの格納フォルダを作成します。
-<img src="../resources/userMan/tutorial_007.png" alt="">
-<img src="../resources/userMan/tutorial_008.png" alt=""></p>
-<p>作成されたフォルダにインプットデータを格納します。
-<img src="../resources/userMan/tutorial_009.png" alt=""></p>
-<h2 id="2-4-評価指標算出">2-4 評価指標算出</h2>
-<p>本ツールプラグインの機能パネル内【評価指標算出機能】を押下し、インプットデータ、アウトプットデータの格納フォルダ、および圏域設定を指定して評価指標算出を行う。圏域設定は鉄道やバス停、避難所の各データから半径何ｍの範囲を対象とするか数値で入力を行う。
-<img src="../resources/userMan/tutorial_010.png" alt="">
-インプットデータの取り込み、指標の算出処理が実行されます。
-<img src="../resources/userMan/tutorial_011.png" alt="">
-算出完了
-<img src="../resources/userMan/tutorial_012.png" alt=""></p>
-<h2 id="2-5-可視化">2-5 可視化</h2>
-<p>評価指標の算出後、本ツールプラグインの機能パネル内【評価指標算出機能】を押下し評価指標の可視化を行う。
-<img src="../resources/userMan/tutorial_013.png" alt=""></p>
-<p>可視化データを選択します。
-<img src="../resources/userMan/tutorial_014.png" alt=""></p>
-<p>評価指標を選択します。
-<img src="../resources/userMan/tutorial_015.png" alt=""></p>
-<p>年次を選択します。
-<img src="../resources/userMan/tutorial_016.png" alt=""></p>
-<p>実行ボタンを押下すると、選択した指標に該当するレイヤの凡例、マップ、グラフが表示されます。
-<img src="../resources/userMan/tutorial_017.png" alt=""></p>
-<p>評価指標を選択し、参考グラフ表示ボタンを押下すると選択した指標の参考グラフが表示されます。
-<img src="../resources/userMan/tutorial_018.png" alt=""></p>
+<h2 id="2-1-評価指標算出プラグインの起動">2-1 評価指標算出プラグインの起動</h2>
+<ol>
+<li>QGIS画面から、プラグイン &gt; Plateau Statics Visualization Plugin を選択しプラグインを起動します。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_005.png" alt=""></p>
+<h2 id="2-2-フォルダ生成評価指標データ格納">2-2 フォルダ生成・評価指標データ格納</h2>
+<ol>
+<li>機能パネル内の【フォルダ作成】を押下し、インプットデータの格納フォルダを作成します。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_006.png" alt=""></p>
+<ol start="2">
+<li>フォルダパスを指定し、「OK」ボタンを押下するとフォルダが作成されます。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_007.png" alt=""></p>
+<ol start="3">
+<li>作成されたフォルダにインプットデータを格納します。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_008.png" alt=""></p>
+<p>格納するデータの一覧は以下の通りです。</p>
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>格納フォルダ名</th>
+<th>必須/任意</th>
+<th>入手先</th>
+<th>格納データ ※3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>01_都市モデル（建物）</td>
+<td>必須</td>
+<td>G空間情報センター</td>
+<td>PLATEAU GIS ConverterでbldgデータをGeopackage形式へ変換したデータ ※1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>02_ゾーンポリゴン</td>
+<td>必須</td>
+<td>国土数値情報</td>
+<td>行政区域</td>
+</tr>
+<tr>
+<td>3</td>
+<td>03_鉄道駅位置</td>
+<td>必須</td>
+<td>国土数値情報</td>
+<td>鉄道</td>
+</tr>
+<tr>
+<td>4</td>
+<td>04_鉄道ネットワーク</td>
+<td>必須</td>
+<td>国土数値情報</td>
+<td>鉄道</td>
+</tr>
+<tr>
+<td>5</td>
+<td>05_バス停</td>
+<td>必須</td>
+<td>国土数値情報</td>
+<td>バス停留所</td>
+</tr>
+<tr>
+<td>6</td>
+<td>06_バスルート</td>
+<td>必須</td>
+<td>国土数値情報</td>
+<td>バスルート</td>
+</tr>
+<tr>
+<td>7</td>
+<td>07_道路ネットワーク</td>
+<td>必須</td>
+<td>OpenStreetMap</td>
+<td>gis_osm_roads_free_1.shp</td>
+</tr>
+<tr>
+<td>8</td>
+<td>08_施設</td>
+<td>任意</td>
+<td>国土数値情報、各自治体保有データ</td>
+<td>市区町村役場、市町村役場等及び公的集会施設、文化施設、福祉施設、医療機関、学校</td>
+</tr>
+<tr>
+<td>9</td>
+<td>09_避難所</td>
+<td>任意</td>
+<td>国土数値情報</td>
+<td>避難施設</td>
+</tr>
+<tr>
+<td>10</td>
+<td>10_250mメッシュ</td>
+<td>必須</td>
+<td>e-stat</td>
+<td>境界データ&gt;5次メッシュ（250mメッシュ）&gt;世界測地系緯度経度・Shapefile</td>
+</tr>
+<tr>
+<td>11</td>
+<td>11_250mメッシュ人口</td>
+<td>必須</td>
+<td>e-stat</td>
+<td>統計データ&gt;国勢調査&gt;各年度&gt;5次メッシュ（250mメッシュ）</td>
+</tr>
+<tr>
+<td>12</td>
+<td>12_500mメッシュ別将来人口</td>
+<td>必須</td>
+<td>国土数値情報</td>
+<td>500mメッシュ別将来推計人口</td>
+</tr>
+<tr>
+<td>13</td>
+<td>13_変化度マップ（建物変化）</td>
+<td>任意</td>
+<td>国より提供</td>
+<td>自治体に関連する1次メッシュ単位で格納</td>
+</tr>
+<tr>
+<td>14</td>
+<td>14_土地利用細分化メッシュ</td>
+<td>任意</td>
+<td>国土数値情報</td>
+<td>土地利用細分化メッシュ</td>
+</tr>
+<tr>
+<td>15</td>
+<td>15_ハザードエリア計画規模</td>
+<td>任意</td>
+<td>国土数値情報</td>
+<td>洪水浸水想定区域（1次メッシュ単位）&gt;10_計画規模</td>
+</tr>
+<tr>
+<td>16</td>
+<td>16_ハザードエリア想定最大規模</td>
+<td>任意</td>
+<td>国土数値情報</td>
+<td>洪水浸水想定区域（1次メッシュ単位）&gt;20_想定最大規模</td>
+</tr>
+<tr>
+<td>17</td>
+<td>17_ハザードエリア高潮浸水想定区域</td>
+<td>任意</td>
+<td>国土数値情報</td>
+<td>高潮浸水想定区域</td>
+</tr>
+<tr>
+<td>18</td>
+<td>18_ハザードエリア津波浸水想定区域</td>
+<td>任意</td>
+<td>国土数値情報</td>
+<td>津波浸水想定</td>
+</tr>
+<tr>
+<td>19</td>
+<td>19_ハザードエリア土砂災害</td>
+<td>任意</td>
+<td>国土数値情報</td>
+<td>土砂災害警戒区域</td>
+</tr>
+<tr>
+<td>20</td>
+<td>20_ハザードエリア氾濫流</td>
+<td>任意</td>
+<td>国土数値情報</td>
+<td>洪水浸水想定区域（1次メッシュ単位）&gt;41_家屋倒壊等氾濫想定区域_氾濫流</td>
+</tr>
+<tr>
+<td>21</td>
+<td>21_誘導区域</td>
+<td>必須 ※2</td>
+<td>国土交通省_都市計画決定GISオープンデータ</td>
+<td>都市計画情報</td>
+</tr>
+<tr>
+<td>22</td>
+<td>22_仮想居住誘導区域</td>
+<td>任意</td>
+<td>自治体保有データ</td>
+<td>居住誘導区域データがない場合ユーザーにて作成</td>
+</tr>
+<tr>
+<td>23</td>
+<td>23_地価公示</td>
+<td>任意</td>
+<td>国土数値情報</td>
+<td>地価公示</td>
+</tr>
+<tr>
+<td>24</td>
+<td>24_空き家ポイント</td>
+<td>任意</td>
+<td>―</td>
+<td>―</td>
+</tr>
+<tr>
+<td>25</td>
+<td>25_固定資産の価格等の概要調書</td>
+<td>任意</td>
+<td>総務省</td>
+<td>固定資産の価格等の概要調書</td>
+</tr>
+<tr>
+<td>26</td>
+<td>26_市町村別決算状況調</td>
+<td>任意</td>
+<td>総務省</td>
+<td>市町村別決算状況調</td>
+</tr>
+<tr>
+<td>27</td>
+<td>27_人口集中地区</td>
+<td>任意</td>
+<td>国土数値情報</td>
+<td>人口集中地区データ</td>
+</tr>
+</tbody>
+</table>
+<p>※1 3D都市モデル（建物データ）のGeopackage形式への変換方法については、環境構築手順書を参照ください。</p>
+<p>※2 22_仮想居住誘導区域のデータがある場合は任意となります。</p>
+<p>※3 格納データの「xxx&gt;xxx&gt;xxx」の表記はダウンロードサイト上のナビゲーション（パンくずリスト）を示しています。</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>No.1〜7, 10〜12のデータは必須です。不足している場合、エラーメッセージが表示され算出処理が終了します。各フォルダのデータ格納状況をご確認ください。
+その他のデータは任意で、未検出時はスキップまたは空データとして処理が継続されます。
+各データの入手先については環境構築手順書を参照ください。</p>
+</div>
+<h2 id="2-3-評価指標の算出">2-3 評価指標の算出</h2>
+<ol>
+<li>機能パネル内の【評価指標算出機能】を押下し、データの格納フォルダや諸条件を入力します。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_009.png" alt=""></p>
+<p>各項目の設定内容は以下の通りです。</p>
+<ul>
+<li><strong>誘導区域の種類の選択</strong>: 「変更前の誘導区域」を選択します</li>
+<li><strong>インプット格納フォルダの指定</strong>: インプットデータの格納フォルダを指定します、デフォルトでは、フォルダ生成で作成したパスが記載されます</li>
+<li><strong>アウトプット格納フォルダの指定</strong>: アウトプットデータ（評価指標の算出結果：csv形式）の出力フォルダを指定します</li>
+<li><strong>バス圏域の設定</strong>: バス停から指定した距離の同心円圏域を作成します</li>
+<li><strong>鉄道圏域の設定</strong>: 鉄道駅から指定した距離の同心円圏域を作成します</li>
+<li><strong>避難施設圏域の設定</strong>: 避難施設から指定した距離の同心円圏域を作成します</li>
+</ul>
+<ol start="2">
+<li>「OK」を押下すると、「集計対象市町村選択」ダイアログが表示されます。評価指標算出を行う市町村を選択し、「OK」を押下するとインプットデータの取り込み、指標の算出処理が実行されます。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_010.png" alt=""></p>
+<ol start="3">
+<li>演算処理が完了したら「完了」ダイアログが表示されます。「OK」を押下すると「評価指標の算出」の完了です。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_011.png" alt=""></p>
+<h2 id="2-4-可視化">2-4 可視化</h2>
+<ol>
+<li>評価指標の算出後、機能パネル内の【可視化機能】を押下し評価指標の可視化を行います。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_012.png" alt=""></p>
+<ol start="2">
+<li>可視化データを選択します。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_013.png" alt=""></p>
+<ol start="3">
+<li>評価指標を選択します。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_014.png" alt=""></p>
+<ol start="4">
+<li>年次を選択します。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_015.png" alt=""></p>
+<ol start="5">
+<li>実行ボタンを押下すると、選択した指標に該当するレイヤの凡例、マップ、グラフが表示されます。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_016.png" alt=""></p>
+<ol start="6">
+<li>評価指標を選択し、参考グラフ表示ボタンを押下すると選択した指標の参考グラフが表示されます。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_017.png" alt=""></p>
 <h2 id="2-5-データ出力">2-5 データ出力</h2>
-<p>本ツールプラグインの機能パネル内【データ出力】を押下しデータ格納先フォルダおよび出力形式を指定する。
-<img src="../resources/userMan/tutorial_019.png" alt=""></p>
-<p>OKボタンを押下すると評価指標算出機能で算出した各指標に基づくデータを出力することができます。
-<img src="../resources/userMan/tutorial_020.png" alt=""></p>
+<ol>
+<li>機能パネル内の【データ出力】を押下しデータ格納先フォルダを指定します。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_018.png" alt=""></p>
+<ol start="2">
+<li>OKボタンを押下すると評価指標算出機能で算出した各指標に基づくデータを出力することができます。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_019.png" alt=""></p>
+<ol start="3">
+<li>データがzip形式にまとめて出力されます。</li>
+</ol>
+<p><img src="../resources/userMan/tutorial_020.png" alt=""></p>
+<p><img src="../resources/userMan/tutorial_021.png" alt=""></p>
+<hr>
 
 </article>
           </div>

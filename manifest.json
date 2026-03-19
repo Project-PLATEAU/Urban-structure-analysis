@@ -1,5 +1,5 @@
 {
-  "source_base_path": "/Users/ryuichiogomori/ZECKAY/GIS/git hub pages/markdown",
+  "source_base_path": "/Users/ryuichiogomori/ZECKAY/GIS/ATCRepo/Urban-structure-analysis/markdown",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -16,6 +16,16 @@
       "output": {
         ".html": {
           "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/advancedMan.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/advancedMan.html"
         }
       },
       "version": ""
@@ -49,6 +59,96 @@
       "output": {
         ".html": {
           "relative_path": "manual/userMan.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/advancedMan/tutorial_000.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/advancedMan/tutorial_000.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/advancedMan/tutorial_001.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/advancedMan/tutorial_001.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/advancedMan/tutorial_002.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/advancedMan/tutorial_002.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/advancedMan/tutorial_003.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/advancedMan/tutorial_003.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/advancedMan/tutorial_004.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/advancedMan/tutorial_004.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/advancedMan/tutorial_005.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/advancedMan/tutorial_005.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/advancedMan/tutorial_006.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/advancedMan/tutorial_006.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/advancedMan/tutorial_007.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/advancedMan/tutorial_007.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/advancedMan/tutorial_008.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/advancedMan/tutorial_008.png"
         }
       },
       "version": ""
@@ -109,6 +209,56 @@
       "output": {
         "resource": {
           "relative_path": "resources/devMan/tutorial_006.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/tutorial_007.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/tutorial_007.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/tutorial_008.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/tutorial_008.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/tutorial_009.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/tutorial_009.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/tutorial_010.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/tutorial_010.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/tutorial_011.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/tutorial_011.png"
         }
       },
       "version": ""
@@ -329,6 +479,36 @@
       "output": {
         "resource": {
           "relative_path": "resources/userMan/tutorial_020.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/userMan/tutorial_021.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/userMan/tutorial_021.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/操作マニュアル参考資料.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "resources/操作マニュアル参考資料.pdf"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "styles/main.css",
+      "output": {
+        "resource": {
+          "relative_path": "styles/main.css"
         }
       },
       "version": ""
