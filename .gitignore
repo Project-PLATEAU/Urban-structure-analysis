@@ -1,11 +1,11 @@
 # Pythonキャッシュファイル・コンパイル済みファイル
-src/__pycache__/
-src/**/*.pyc
-src/**/*.pyo
-src/**/*.egg-info/
+__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.egg-info/
 
 # IDEの設定ファイル
-src/.idea/
+.idea/
 .vscode/
 
 # OSが生成する不要なファイル
@@ -18,11 +18,11 @@ desktop.ini
 *.log
 
 # テスト関連（リリースには不要）
-src/test/
-src/scripts/
+test/
+scripts/
 
 # データファイル（オープンソース対象外）
-src/data/
+data/
 
 # 開発環境用の設定ファイル
-src/pylintrc
+pylintrc

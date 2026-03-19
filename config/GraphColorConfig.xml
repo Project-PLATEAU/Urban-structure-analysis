@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphcolor_config>
+    <dataset>
+        <!-- IF101 居住誘導関連評価指標 -->
+        <item_val>0</item_val>
+        <data>
+            <color>#FFF9B1,#FFF67F,#FFF33F</color>
+        </data>
+        <item_val>101</item_val>
+        <data>
+            <color>#FFF9B1,#FFF67F,#FFF33F</color>
+        </data>
+        <item_val>103</item_val>
+        <data>
+            <color>#FFF9B1,#FFF67F,#FFF33F</color>
+        </data>
+        <item_val>104</item_val>
+        <data>
+            <color>#FFF9B1,#FFF67F,#FFF33F</color>
+        </data>
+        <!-- IF102 都市機能誘導関連評価指標 -->
+        <item_val>1</item_val>
+        <data>
+            <color>#F5B090,#EF845C,#EA5532</color>
+        </data>
+        <item_val>201</item_val>
+        <data>
+            <color>#F5B090,#EF845C,#EA5532</color>
+        </data>
+        <item_val>202</item_val>
+        <data>
+            <color>#F5B090,#EF845C,#EA5532</color>
+        </data>
+        <item_val>203</item_val>
+        <data>
+            <color>#F5B090,#EF845C,#EA5532</color>
+        </data>
+        <!-- IF103 防災関連評価指標 -->
+        <item_val>2</item_val>
+        <data>
+            <color>#CFA7CD,#BA79B1,#A64A97</color>
+        </data>
+        <item_val>301</item_val>
+        <data>
+            <color>#CFA7CD,#BA79B1,#A64A97</color>
+        </data>
+        <item_val>302</item_val>
+        <data>
+            <color>#CFA7CD,#BA79B1,#A64A97</color>
+        </data>
+        <item_val>303</item_val>
+        <data>
+            <color>#CFA7CD,#BA79B1,#A64A97</color>
+        </data>
+        <!-- IF104 公共交通関連評価指標 -->
+        <item_val>3</item_val>
+        <data>
+            <color>#9FD9F6,#54C3F1,#00AFEC</color>
+        </data>
+        <item_val>401</item_val>
+        <data>
+            <color>#9FD9F6,#54C3F1,#00AFEC</color>
+        </data>
+        <!-- IF105 土地利用関連評価指標 -->
+        <item_val>4</item_val>
+        <data>
+            <color>#A5D4AD,#69BD83,#00A95F</color>
+        </data>
+        <item_val>501</item_val>
+        <data>
+            <color>#A5D4AD,#69BD83,#00A95F</color>
+        </data>
+        <!-- IF106 財政関連評価指標 -->
+        <item_val>5</item_val>
+        <data>
+            <color>#D7E7AF,#C1DB81,#AACF52</color>
+        </data>
+        <item_val>601</item_val>
+        <data>
+            <color>#D7E7AF,#C1DB81,#AACF52</color>
+        </data>
+        <item_val>602</item_val>
+        <data>
+            <color>#D7E7AF,#C1DB81,#AACF52</color>
+        </data>
+        <item_val>603</item_val>
+        <data>
+            <color>#D7E7AF,#C1DB81,#AACF52</color>
+        </data>
+        <item_val>604</item_val>
+        <data>
+            <color>#D7E7AF,#C1DB81,#AACF52</color>
+        </data>
+        <!-- IF107 将来人口と目標人口の関係性 -->
+        <item_val>6</item_val>
+        <data>
+            <color>#BFBFBF,#A6A6A6,#747474</color>
+        </data>
+        <item_val>701</item_val>
+        <data>
+            <color>#BFBFBF,#A6A6A6,#747474</color>
+        </data>
+    </dataset>
+</graphcolor_config>

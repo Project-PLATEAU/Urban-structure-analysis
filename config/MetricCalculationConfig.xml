@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<config><input_folder>C:/uc09</input_folder><output_folder>C:/uc09</output_folder><output_folder_revised>C:/uc09/変更後</output_folder_revised><threshold_bus>300</threshold_bus><threshold_railway>800</threshold_railway><threshold_shelter>1000</threshold_shelter></config>

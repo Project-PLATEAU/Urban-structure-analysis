@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<config><input_folder>C:/PlateauStatisticsVisualization/input_data</input_folder><output_folder>C:/PlateauStatisticsVisualization/output_data</output_folder><threshold_bus>500</threshold_bus><threshold_railway>500</threshold_railway><threshold_shelter>500</threshold_shelter></config>
