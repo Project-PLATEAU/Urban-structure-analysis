@@ -130,30 +130,86 @@
 </tbody>
 </table>
 <p>※1 入手するインプットデータ等により必要な容量は異なります。データの保存に十分な容量をご用意ください。</p>
-<h1 id="3-インストール手順">3 インストール手順</h1>
-<h2 id="3-1-qgisのインストール">3-1. QGISのインストール</h2>
-<p><a href="https://qgis.org/download/">こちら</a>
-からQGIS（バージョン 3.34）をダウンロード、インストールします。</p>
-<h2 id="3-2-本ツールプラグインインストール">3-2. 本ツールプラグインインストール</h2>
-<h3 id="3-2-1-プラグインのダウンロード">3-2-1. プラグインのダウンロード</h3>
-<p><a href="https://github.com/Project-PLATEAU/Urban-structure-analysis/releases">こちら</a>
-から本ツールのプラグインをダウンロードします。</p>
-<h3 id="3-2-2-qgisを起動します">3-2-2. QGISを起動します。</h3>
-<p><img src="../resources/devMan/tutorial_001.png" alt=""></p>
-<h3 id="3-2-3-メニューのプラグインプラグインの管理とインストールを開きます">3-2-3. メニューのプラグイン&gt;プラグインの管理とインストールを開きます。</h3>
-<p><img src="../resources/devMan/tutorial_002.png" alt=""></p>
-<h3 id="3-2-4-zipからインストール画面を開きます">3-2-4. 「ZIPからインストール」画面を開きます。</h3>
-<p><img src="../resources/devMan/tutorial_003.png" alt=""></p>
-<h3 id="3-2-5-本プラグインのzipファイルを選択しインストールを実行します">3-2-5. 本プラグインのZIPファイルを選択し、「インストール」を実行します。</h3>
-<p><img src="../resources/devMan/tutorial_004.png" alt=""></p>
-<p>自身でソースファイルをダウンロードし、QGISのプラグインフォルダに展開することでもインストール可能です。<br>
-ソースファイルは
-<a href="https://github.com/Project-PLATEAU/Urban-structure-analysis/">こちら</a>
-からダウンロード可能です。</p>
-<p>QGISのインストール後、
-C:\Users\{UserName}\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins
-に本ツールのプラグインソースファイルを展開します。</p>
-<p><img src="../resources/devMan/tutorial_005.png" alt=""></p>
+<h1 id="3-事前準備">3 事前準備</h1>
+<h2 id="3-1-評価指標算出プラグインのダウンロード">3-1. 評価指標算出プラグインのダウンロード</h2>
+<ol>
+<li>Google Chromeから「PLATEAU GIThub」を検索し、「Project PLATEAU by MLIT,Japan」をクリックします。</li>
+</ol>
+<p><img src="../resources/devMan/prep_plugin_01.png" alt=""></p>
+<ol start="2">
+<li>開いたページの上部にある検索ウィンドウをクリックすると「org:Project-PLATEAU」が入力されています。その後ろに「urban」を入力し、エンターキーを押下します。</li>
+</ol>
+<p><img src="../resources/devMan/prep_plugin_02.png" alt=""></p>
+<ol start="3">
+<li>検索で表示されたデータのうち、評価指標算出プラグインである「Project-PLATEAU/Urban-structure-analysis」をクリックします。</li>
+</ol>
+<p><img src="../resources/devMan/prep_plugin_03.png" alt=""></p>
+<ol start="4">
+<li>表示されたページ右側にある「Releases」をクリックします。</li>
+</ol>
+<p><img src="../resources/devMan/prep_plugin_04.png" alt=""></p>
+<ol start="5">
+<li>表示されたページの「Assets」にある「Urban-structure-analysis-v1.0.3.zip」をクリックして評価指標算出プラグインをダウンロードし、任意の場所に保存します。</li>
+</ol>
+<p><img src="../resources/devMan/prep_plugin_05.png" alt=""></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>「v1.0.3」の表記は、ツールの更新が行われた場合に変わることがあります。
+Releasesページは<a href="https://github.com/Project-PLATEAU/Urban-structure-analysis/releases">こちら</a>から直接開くこともできます。</p>
+</div>
+<h2 id="3-2-qgisのインストール">3-2. QGISのインストール</h2>
+<p>本ツールは動作確認済みのバージョン（QGIS 3.40.11）を使用するため、以下は過去バージョンをダウンロードする手順となります。
+すでに「3.40.11」と異なるバージョンをインストール済みの場合も、改めて本手順に従ってダウンロード・インストールしてください。</p>
+<h3 id="3-2-1-qgisのダウンロード">3-2-1. QGISのダウンロード</h3>
+<ol>
+<li>Google Chromeから「QGIS Downloads」を検索し、末尾に「s」がついている「Downloads」ページをクリックします。</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Microsoft Edgeからの検索が難しいため、Google Chromeを推奨します。</p>
+</div>
+<p><img src="../resources/devMan/prep_qgis_01.png" alt=""></p>
+<ol start="2">
+<li>インストーラーのOSを選ぶページが表示されるので、「Windows」をクリックします。</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>本ツールはmacOSには対応していません。</p>
+</div>
+<p><img src="../resources/devMan/prep_qgis_02.png" alt=""></p>
+<ol start="3">
+<li>Windows版のインストーラーを選ぶページが表示されるので、検索ウィンドウに「3.40.11」と入力します。</li>
+</ol>
+<p><img src="../resources/devMan/prep_qgis_03.png" alt=""></p>
+<ol start="4">
+<li>3.40.11のインストーラーを選ぶページが表示されるので、「QGIS-OSGeo4W-3.40.11-1.msi」を選択し、任意のフォルダに保存します。</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>ファイルサイズが1.3GBあるため、ダウンロードに少々時間がかかります。</p>
+</div>
+<p><img src="../resources/devMan/prep_qgis_04.png" alt=""></p>
+<h3 id="3-2-2-qgisのインストール">3-2-2. QGISのインストール</h3>
+<ol>
+<li>ダウンロードした3.40.11のインストーラーをダブルクリックします。セットアップウィンドウが表示されたら「Next」をクリックします。</li>
+</ol>
+<p><img src="../resources/devMan/prep_qgis_05.png" alt=""></p>
+<ol start="2">
+<li>ライセンス認証のページが表示されます。左下のチェックをクリックしてから、「Next」をクリックします。</li>
+</ol>
+<p><img src="../resources/devMan/prep_qgis_06.png" alt=""></p>
+<ol start="3">
+<li>インストールするフォルダを指定するページが表示されます。「Next」をクリックします。</li>
+</ol>
+<p><img src="../resources/devMan/prep_qgis_07.png" alt=""></p>
+<ol start="4">
+<li>インストールを開始するページが表示されます。「Install」をクリックします。</li>
+</ol>
+<p><img src="../resources/devMan/prep_qgis_08.png" alt=""></p>
+<ol start="5">
+<li>インストールが開始されます。インストールが完了したら「Finish」をクリックします。</li>
+</ol>
+<p><img src="../resources/devMan/prep_qgis_09.png" alt=""></p>
 <h2 id="3-3-3d都市モデルのデータ形式変換">3-3. 3D都市モデルのデータ形式変換</h2>
 <p>PLATEAUが配布している3D都市モデルは、CityGML形式です。この形式のファイルをQGISで読み込むにはGeoPackage形式への変換が必要になります。そのため、「PLATEAU GIS Converter」というソフトウェアを使用して変換を行います。</p>
 <h3 id="3-3-1-データ格納フォルダの作成">3-3-1. データ格納フォルダの作成</h3>
@@ -177,11 +233,10 @@ C:\Users\{UserName}\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins
 <p>ダウンロードしたファイルは、解凍してください。</p>
 <p><img src="../resources/devMan/tutorial_007.png" alt=""></p>
 <h3 id="3-3-3-変換ソフトの入手とセットアップ">3-3-3. 変換ソフトの入手とセットアップ</h3>
-<p>「PLATEAU GIS Converter」は、CityGML形式のデータをGeoPackage形式に変換するためのソフトウェアです。下記サイトよりインストーラーをダウンロードして起動し、セットアップを行います。</p>
+<p>「PLATEAU GIS Converter」は、CityGML形式のデータをGeoPackage形式に変換するためのソフトウェアです。下記サイトよりインストーラー（Windows版）をダウンロードして起動し、セットアップを行います。</p>
 <p><a href="https://github.com/Project-PLATEAU/PLATEAU-GIS-Converter/releases">https://github.com/Project-PLATEAU/PLATEAU-GIS-Converter/releases</a></p>
 <ul>
 <li>Windows版: <code>PLATEAU.GIS.Converter_X.X.X_x64-setup.exe</code></li>
-<li>macOS版: <code>PLATEAU.GIS.Converter_X.X.X_universal.dmg</code></li>
 </ul>
 <p><img src="../resources/devMan/tutorial_008.png" alt=""></p>
 <h3 id="3-3-4-データ形式の変換">3-3-4. データ形式の変換</h3>
@@ -229,6 +284,30 @@ C:\Users\{UserName}\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins
 <h4 id="3-3-4-4-変換実行">3-3-4-4. 変換実行</h4>
 <p>設定が完了したら「変換」ボタンを押下すると、指定フォルダに「GeoPackage形式」へ変換された3D都市モデル（CityGML）データが作成されます。</p>
 <p><img src="../resources/devMan/tutorial_011.png" alt=""></p>
+<h2 id="3-4-本ツールプラグインのインストール">3-4. 本ツールプラグインのインストール</h2>
+<ol>
+<li>QGISを起動します。</li>
+</ol>
+<p><img src="../resources/devMan/install_01.png" alt=""></p>
+<ol start="2">
+<li>上部メニューの プラグイン &gt; プラグインの管理とインストール を開きます。</li>
+</ol>
+<p><img src="../resources/devMan/install_02.png" alt=""></p>
+<ol start="3">
+<li>左メニューの「ZIPからインストール」をクリックし、ZIPファイルの選択を開きます。</li>
+</ol>
+<p><img src="../resources/devMan/install_03.png" alt=""></p>
+<ol start="4">
+<li>ZIPファイルの選択部分（「…」ボタン）をクリックし、3-1でダウンロードした「Urban-structure-analysis-v1.0.3.zip」を選択します。その後、「インストール」ボタンをクリックします。</li>
+</ol>
+<p><img src="../resources/devMan/install_04.png" alt=""></p>
+<p>自身でソースファイルをダウンロードし、QGISのプラグインフォルダに展開することでもインストール可能です。<br>
+ソースファイルは
+<a href="https://github.com/Project-PLATEAU/Urban-structure-analysis/">こちら</a>
+からダウンロード可能です。</p>
+<p>QGISのインストール後、
+C:\Users\{UserName}\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins
+に本ツールのプラグインソースファイルを展開します。</p>
 <h1 id="4-準備物一覧">4 準備物一覧</h1>
 <p>アプリケーションを利用するために以下のデータを入手します。
 格納フォルダは本ツールのフォルダ生成機能により作成されます。</p>
@@ -1446,19 +1525,19 @@ C:\Users\{UserName}\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins
 </tr>
 <tr>
 <td>入手先</td>
-<td>国より提供</td>
+<td>国土交通省都市局ホームページ</td>
 </tr>
 <tr>
 <td>URL</td>
-<td>―</td>
+<td><a href="https://www.mlit.go.jp/en/toshi/city_plan/compactcity_network.html">https://www.mlit.go.jp/en/toshi/city_plan/compactcity_network.html</a></td>
 </tr>
 <tr>
 <td>データ作成年度</td>
-<td>―</td>
+<td>2024年（令和6年）</td>
 </tr>
 <tr>
 <td>DLファイル名称</td>
-<td>―</td>
+<td>XXXX（一次メッシュコード）_変化度マップ.zip</td>
 </tr>
 <tr>
 <td>格納データ名称</td>
@@ -1466,6 +1545,7 @@ C:\Users\{UserName}\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins
 </tr>
 </tbody>
 </table>
+<p>※上記ページの「変化度マップ（建物変化）」〔1〕～〔5〕を全てダウンロードします。</p>
 <h2 id="5-14-14_土地利用細分化メッシュ">5-14. 14_土地利用細分化メッシュ</h2>
 <table>
 <thead>

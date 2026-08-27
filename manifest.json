@@ -1,5 +1,5 @@
 {
-  "source_base_path": "/Users/ryuichiogomori/ZECKAY/GIS/ATCRepo/Urban-structure-analysis/markdown",
+  "source_base_path": "/Users/ryuichiogomori/ZECKAY/Urban-structure-analysis/markdown",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -155,50 +155,180 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/devMan/tutorial_001.png",
+      "source_relative_path": "resources/devMan/install_01.png",
       "output": {
         "resource": {
-          "relative_path": "resources/devMan/tutorial_001.png"
+          "relative_path": "resources/devMan/install_01.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/devMan/tutorial_002.png",
+      "source_relative_path": "resources/devMan/install_02.png",
       "output": {
         "resource": {
-          "relative_path": "resources/devMan/tutorial_002.png"
+          "relative_path": "resources/devMan/install_02.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/devMan/tutorial_003.png",
+      "source_relative_path": "resources/devMan/install_03.png",
       "output": {
         "resource": {
-          "relative_path": "resources/devMan/tutorial_003.png"
+          "relative_path": "resources/devMan/install_03.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/devMan/tutorial_004.png",
+      "source_relative_path": "resources/devMan/install_04.png",
       "output": {
         "resource": {
-          "relative_path": "resources/devMan/tutorial_004.png"
+          "relative_path": "resources/devMan/install_04.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/devMan/tutorial_005.png",
+      "source_relative_path": "resources/devMan/prep_plugin_01.png",
       "output": {
         "resource": {
-          "relative_path": "resources/devMan/tutorial_005.png"
+          "relative_path": "resources/devMan/prep_plugin_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/prep_plugin_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/prep_plugin_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/prep_plugin_03.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/prep_plugin_03.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/prep_plugin_04.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/prep_plugin_04.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/prep_plugin_05.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/prep_plugin_05.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/prep_qgis_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/prep_qgis_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/prep_qgis_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/prep_qgis_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/prep_qgis_03.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/prep_qgis_03.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/prep_qgis_04.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/prep_qgis_04.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/prep_qgis_05.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/prep_qgis_05.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/prep_qgis_06.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/prep_qgis_06.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/prep_qgis_07.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/prep_qgis_07.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/prep_qgis_08.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/prep_qgis_08.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/prep_qgis_09.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/prep_qgis_09.png"
         }
       },
       "version": ""
@@ -335,6 +465,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "resources/userMan/tutorial_005b.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/userMan/tutorial_005b.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "resources/userMan/tutorial_006.png",
       "output": {
         "resource": {
@@ -359,6 +499,16 @@
       "output": {
         "resource": {
           "relative_path": "resources/userMan/tutorial_008.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/userMan/tutorial_008b.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/userMan/tutorial_008b.png"
         }
       },
       "version": ""

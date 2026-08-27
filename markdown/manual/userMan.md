@@ -11,9 +11,14 @@
 
 ## 2-1 評価指標算出プラグインの起動
 
-1. QGIS画面から、プラグイン > Plateau Statics Visualization Plugin を選択しプラグインを起動します。
+1. QGIS画面から、プラグイン > Plateau Statics Visualization Plugin を選択しプラグインを起動します。<br>
+   または、ツールバー左上に追加されたプラグインのアイコンをクリックしても起動できます。
 
 ![](../resources/userMan/tutorial_005.png)
+
+2. プラグインが起動したら左下に「機能パネル」が表示されます。
+
+![](../resources/userMan/tutorial_005b.png)
 
 ## 2-2 フォルダ生成・評価指標データ格納
 
@@ -28,6 +33,10 @@
 3. 作成されたフォルダにインプットデータを格納します。
 
 ![](../resources/userMan/tutorial_008.png)
+
+4. 作成されたフォルダ内に作成された「population_target_setting.csv」ファイルをエクセルで開き、「立地適正化計画」で設定されている「目標年次（西暦）」および「目標人口」を入力し、上書き保存します。
+
+![](../resources/userMan/tutorial_008b.png)
 
 格納するデータの一覧は以下の通りです。
 
