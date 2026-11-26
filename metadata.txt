@@ -6,7 +6,7 @@
 name=Plateau Statistics Visualization Plugin
 qgisMinimumVersion=3.0
 description=This plugin calculates indicators for evaluating urban structure based on a 3D city model (CityGML) and various other data, and can visualize them using maps and graphs on QGIS.</br> 本プラグインは、3D都市モデル（CityGML）やその他の多様なデータを基に、都市構造に係る評価指標を算出し、QGIS上で地図やグラフを用いて可視化することができます
-version=1.0.3
+version=1.0.4
 author=MLIT Japan
 email=mail
 
