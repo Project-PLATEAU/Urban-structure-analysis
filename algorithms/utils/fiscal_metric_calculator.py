@@ -178,9 +178,25 @@ class FiscalMetricCalculator:
                     {'id': 2, 'label': '2017-2022', 'years': list(range(2017, 2023))}
                 ]
 
+                # 2012〜2022年度の一人当たり歳出額を計算
+                per_capita_by_year = self.calculate_per_capita_by_year(
+                    target_cities, settlement_dir, range(2012, 2023)
+                )
+
+                # 各期間の一人当たり歳出額対前年比の平均（過去: 2013〜2017年度、直近: 2018〜2022年度）
+                period_yoy_avgs = []
                 for period in periods:
+                    period_per_capita = {
+                        year: per_capita_by_year[year]
+                        for year in period['years']
+                        if year in per_capita_by_year
+                    }
+                    yoy_avg = self.average_per_capita_yoy_ratio(
+                        per_capita_by_year, period['years'][1:]
+                    )
+                    period_yoy_avgs.append(yoy_avg)
                     period_expenditure_data = self.calculate_period_expenditure(
-                        target_cities, settlement_dir, period['years'], period['id'], period['label']
+                        period_per_capita, yoy_avg, period['id'], period['label']
                     )
                     if period_expenditure_data:
                         expenditure_data_list.append(period_expenditure_data)
@@ -197,17 +213,13 @@ class FiscalMetricCalculator:
                         }
                         expenditure_data_list.append(empty_period_data)
 
-                # 一人あたり歳出額平均の変化を計算（直近5年間の平均 ÷ 過去5年間の平均）
+                # 一人当たり歳出額増減率（%）を計算
+                # (直近5年間(2017-2022)の対前年比平均) / (過去5年間(2012-2017)の対前年比平均) × 100
                 if len(expenditure_data_list) == 2:
-                    past_period = expenditure_data_list[0]  # 2012-2017
                     recent_period = expenditure_data_list[1]  # 2017-2022
-
-                    if (isinstance(past_period['per_capita_expenditure_avg'], (int, float)) and
-                        isinstance(recent_period['per_capita_expenditure_avg'], (int, float)) and
-                        past_period['per_capita_expenditure_avg'] > 0):
-
-                        delta = recent_period['per_capita_expenditure_avg'] / past_period['per_capita_expenditure_avg']
-                        recent_period['per_capita_expenditure_avg_delta'] = self.round_or_na(delta, 3)
+                    recent_period['per_capita_expenditure_avg_delta'] = self.calculate_per_capita_expenditure_delta(
+                        period_yoy_avgs[0], period_yoy_avgs[1]
+                    )
             else:
                 # ディレクトリが存在しない場合は期間別の空データを作成
                 periods = [
@@ -753,23 +765,16 @@ class FiscalMetricCalculator:
             empty_expenditure_data_list,
         )
 
-    def calculate_period_expenditure(self, target_cities, settlement_dir, target_years, period_id, period_label):
-        """固定期間の歳出額データを計算"""
+    def calculate_per_capita_by_year(self, target_cities, settlement_dir, target_years):
+        """各年度の一人当たり歳出額を計算"""
+        per_capita_by_year = {}
         try:
-            # 対象年度のデータを読み込み
-            annual_data = {}
             for year in target_years:
                 year_folder = f"{year}年度"
                 data = self.read_settlement_data(settlement_dir, year_folder, year)
-                if data is not None:
-                    annual_data[year] = data
+                if data is None:
+                    continue
 
-            if len(annual_data) < 1:
-                return None
-
-            # 各年の一人当たり歳出額を計算
-            per_capita_by_year = {}
-            for year, data in annual_data.items():
                 total_expenditure = 0
                 total_population = 0
 
@@ -781,18 +786,49 @@ class FiscalMetricCalculator:
                 if total_population > 0:
                     per_capita_by_year[year] = total_expenditure / total_population
 
+        except Exception as e:
+            QgsMessageLog.logMessage(
+                self.tr("Error in period expenditure calculation: %1").replace("%1", str(e)),
+                self.tr("Plugin"),
+                Qgis.Warning,
+            )
+        return per_capita_by_year
+
+    def average_per_capita_yoy_ratio(self, per_capita_by_year, years):
+        """指定年度の一人当たり歳出額対前年比（前年度比の比率）の平均を計算"""
+        ratios = [
+            per_capita_by_year[year] / per_capita_by_year[year - 1]
+            for year in years
+            if year in per_capita_by_year and per_capita_by_year.get(year - 1, 0) > 0
+        ]
+        if not ratios:
+            return None
+        return sum(ratios) / len(ratios)
+
+    def calculate_per_capita_expenditure_delta(self, past_yoy_avg, recent_yoy_avg):
+        """一人当たり歳出額増減率（%）を計算
+
+        (直近5年間の一人当たり歳出額対前年比平均) / (過去5年間の一人当たり歳出額対前年比平均) × 100
+        """
+        if past_yoy_avg is None or recent_yoy_avg is None or past_yoy_avg <= 0:
+            return '―'
+        return self.round_or_na(recent_yoy_avg / past_yoy_avg * 100, 2)
+
+    def calculate_period_expenditure(self, per_capita_by_year, yoy_avg, period_id, period_label):
+        """固定期間の歳出額データを計算"""
+        try:
             if len(per_capita_by_year) < 1:
                 return None
 
-            # 期間内の一人当たり歳出額の平均値を計算
+            # 期間内の一人当たり歳出額対前年比の平均値（%）
             avg_per_capita = '―'
-            if len(per_capita_by_year) > 0:
-                avg_per_capita = self.round_or_na(sum(per_capita_by_year.values()) / len(per_capita_by_year), 1)
+            if yoy_avg is not None:
+                avg_per_capita = self.round_or_na(yoy_avg * 100, 2)
 
             # 期間内の一人当たり歳出額の合計を計算
             total_per_capita = '―'
             if len(per_capita_by_year) > 0:
-                total_per_capita = self.round_or_na(sum(per_capita_by_year.values()), 0)
+                total_per_capita = int(round(sum(per_capita_by_year.values())))
 
 
             return {
